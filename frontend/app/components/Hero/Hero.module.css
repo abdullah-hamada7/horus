@@ -1,0 +1,651 @@
+.container {
+  width: 100%;
+  color: #fff;
+  background-color: #0a0a0a;
+}
+
+/* Typography & Utilities */
+.sectionLabel {
+  font-size: 0.75rem;
+  color: #ff9d00;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.primaryButton ,.secondaryButton {
+  background: #ff9d00;
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.primaryButton:hover ,.secondaryButton:hover {
+  background: #ffb84d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 157, 0, 0.4);
+}
+
+.primaryButtonBlackText {
+  background: #ff9d00;
+  color: #000;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.primaryButtonBlackText:hover {
+  background: #ffb84d;
+  transform: translateY(-2px);
+}
+
+
+.outlineButton {
+  background: transparent;
+  color: #ff9d00;
+  border: 1px solid #ff9d00;
+  padding: 0.8rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.outlineButton:hover {
+  background: rgba(255, 157, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* 1. Hero Section */
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  animation: scaleSlow 20s infinite alternate ease-in-out;
+}
+
+@keyframes scaleSlow {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.7) 0%,
+    rgba(0,0,0,0.2) 40%,
+    rgba(10,10,10,1) 100%
+  );
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+  margin-top: 5vh;
+}
+
+.heroTopText {
+  color: #ff9d00;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  line-height: 1;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #ccc;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.7;
+}
+
+.mouse {
+  width: 24px;
+  height: 36px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  position: relative;
+}
+
+.wheel {
+  width: 4px;
+  height: 6px;
+  background: #fff;
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollWheel 2s infinite ease-in-out;
+}
+
+@keyframes scrollWheel {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  100% { transform: translate(-50%, 15px); opacity: 0; }
+}
+
+/* 2. About Section */
+.aboutSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.aboutText {
+  color: #999;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.aboutImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.aboutImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.aboutImageWrapper:hover .aboutImage {
+  transform: scale(1.05);
+}
+
+/* 3. Three Pillars Section */
+.pillarsSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.pillarCard {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.pillarCard:hover {
+  background: rgba(255,255,255,0.05);
+  transform: translateY(-10px);
+  border-color: rgba(255, 157, 0, 0.3);
+  box-shadow: 0 10px 40px rgba(255, 157, 0, 0.05);
+}
+
+.pillarIconWrapper {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 157, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.pillarIcon {
+  width: 24px;
+  height: 24px;
+  background: #ff9d00;
+  border-radius: 4px;
+}
+
+.pillarIconAlt1 {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ff9d00;
+  border-radius: 50%;
+}
+
+.pillarIconAlt2 {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ff9d00;
+  transform: rotate(45deg);
+}
+
+.pillarTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.pillarDesc {
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.pillarLink {
+  color: #ff9d00;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.pillarLink:hover {
+  color: #ffb84d;
+}
+
+/* 4. Trailer Section */
+.trailerSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.trailerSubtitle {
+  color: #999;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  background: #000;
+}
+
+.trailerVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.customPlayButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 157, 0, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.videoWrapper:hover .customPlayButton {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: rgba(255, 157, 0, 1);
+}
+
+.playIconLarge {
+  font-size: 2rem;
+  color: #000;
+  margin-left: 5px;
+}
+
+.customControlsBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.videoWrapper:hover .customControlsBar,
+.customControlsBar:hover {
+  opacity: 1;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #ff9d00;
+  transition: width 0.1s linear;
+}
+
+/* 5. Inside The Chambers Section */
+.chambersSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 2rem;
+}
+
+.chambersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.chamberCard {
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.chamberCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 157, 0, 0.3);
+}
+
+/* .chamberImagePlaceholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: url("/photos/3.png");
+  background-size: cover;
+  background-position: center   ;
+  position: relative;
+} */
+.chamberImagePlaceholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.chamberInfo {
+  padding: 1.5rem;
+}
+
+.chamberTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.chamberSubtitle {
+  color: #ff9d00;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.viewAllWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* 6. Final CTA Section */
+.finalCtaSection {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: radial-gradient(circle at center, rgba(255,157,0,0.1) 0%, transparent 60%);
+}
+
+.finalCtaTitle {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.finalCtaSubtitle {
+  color: #999;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 4px;
+}
+
+/* 7. Footer CTA Bar */
+.footerBar {
+  background: #111;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.footerBarTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.footerBarSubtitle {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.footerRight {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .chambersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footerBar {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  .aboutText {
+    margin: 0 auto 2.5rem;
+  }
+  .pillarsGrid, .chambersGrid {
+    grid-template-columns: 1fr;
+  }
+  .heroButtons {
+    flex-direction: column;
+  }
+  .primaryButton, .secondaryButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.chatMockupContainer {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1rem;
+}
+
+.chatStatus {
+  width: 8px;
+  height: 8px;
+  background: #34c759;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #34c759;
+}
+
+.chatTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.chatSubtitle {
+  font-size: 0.75rem;
+  color: #ff9d00;
+  font-weight: 600;
+}
+
+.chatMessages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chatBubble {
+  max-width: 85%;
+  padding: 1rem 1.25rem;
+  border-radius: 18px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.chatBubbleUser {
+  background: rgba(255, 255, 255, 0.05);
+  color: #eee;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.chatBubbleBot {
+  background: rgba(255, 157, 0, 0.1);
+  border: 1px solid rgba(255, 157, 0, 0.2);
+  color: #ffb84d;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+

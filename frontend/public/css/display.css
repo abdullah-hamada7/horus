@@ -1,0 +1,25 @@
+/* تنسيق صفحة اللعبة لتملأ الشاشة */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #231f20;
+}
+
+#unity-container {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#unity-canvas {
+    width: 100vw !important; /* يأخذ عرض الشاشة بالكامل */
+    height: 56.25vw !important; /* يحافظ على نسبة 16:9 */
+    max-height: 100vh;
+    max-width: 177.78vh; /* يحافظ على النسبة لو الشاشة بالطول */
+    background: #231f20;
+}

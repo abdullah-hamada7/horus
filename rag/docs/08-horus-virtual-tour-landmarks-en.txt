@@ -1,0 +1,58 @@
+# Virtual Tour Landmark Documents for the HORUS Application (RAG Knowledge Base)
+
+The "HORUS" application provides an interactive 3D virtual tour experience (designed for Web and Mobile platforms, running directly in the browser/phone without needing VR headsets or external equipment). The user navigates through 8 key tour stops of ancient Egyptian monuments and artifacts while talking with the AI guide named Horus.
+
+## Virtual Tour Stop Details
+
+### Stop 1: Temple of Horus at Edfu
+- **Overview**: The exterior courtyard of the Temple of Horus features a majestic avenue lined with statues.
+- **Historical Details**:
+  - The temple is a prominent center of Ptolemaic architecture dedicated to the falcon god Horus.
+  - The path was historically utilized for grand religious processions like the Opet Festival, filled with music, chanting, and sacred incense burners.
+  - In ancient times, the pharaohs walked the Great Avenue of Sphinxes/Rams connecting Luxor and Karnak Temples, which stretches approximately 2,700 meters long, representing one of the oldest and longest ceremonial avenues in the world.
+
+### Stop 2: Ram-Headed Sphinx (Criosphinx)
+- **Overview**: A colossal ram-headed sphinx at the temple entrance.
+- **Historical Details**:
+  - Features a small statue of King Ramesses II standing protectively between its front paws, seeking divine shelter under the deity.
+  - The ram's head symbolizes Amun-Ra, representing divine wisdom and spiritual authority.
+  - The body of a lion symbolizes physical strength and martial dominance.
+  - These Criosphinxes line the sacred processional paths to project the absolute grandeur of both the King and the chief deity, Amun-Ra.
+
+### Stop 3: Entrance Obelisks
+- **Overview**: Two monumental pink granite obelisks flanking the entrance pylon of the temple.
+- **Historical Details**:
+  - The massive pylon and pink granite entrance were built by King Ramesses II.
+  - The obelisks stand directly in front of the gate alongside seated colossal statues of Ramesses II guarding the main entrance portal.
+
+### Stop 4: Sphinx Guardian & Colonnade Hall
+- **Overview**: The classical human-headed sphinx guarding the temple entrance and the transition to the Hypostyle Hall.
+- **Historical Details**:
+  - The human head represents the intelligence, intellect, and divine wisdom of the pharaoh, while the lion's body represents physical might.
+  - The calm and confident facial features of the sphinx represent the eternal guardian protecting the temple and Egypt.
+  - These statues were strategically positioned as spiritual guardians against chaos and evil forces.
+
+### Stop 5: Hypostyle Hall Column Design
+- **Overview**: The rows of massive columns supporting the temple's stone ceiling.
+- **Historical Details**:
+  - The architectural design mimics a sacred primordial forest of papyrus plants rising from the Nile banks.
+  - The capitals of the columns are intricately carved into open and closed papyrus bundles, symbolizing creation, fertility, and renewal.
+  - They were built during the reigns of major pharaohs (like Ramesses II) to support massive stone slabs and elevate the spiritual space.
+
+### Stop 6: Inner Sanctuary & Tutankhamun's Treasures
+- **Overview**: The inner chamber displaying the golden death mask and war chariot of Tutankhamun.
+- **Historical Details**:
+  - The famous golden death mask of the young King Tutankhamun is crafted from solid gold, representing the flesh of the gods, designed to guide the king's spirit to eternal life in the underworld.
+  - The accompanying war chariot indicates that despite his youth, the king underwent rigorous military training to defend the empire's borders.
+
+### Stop 7: Bastet Cat Statue & Nefertiti Bust
+- **Overview**: The Gayer-Anderson Cat statue alongside the Nefertiti bust.
+- **Historical Details**:
+  - The black cat statue represents the goddess Bastet, the protector of the home, family, fertility, and domestic joy.
+  - The bust of Queen Nefertiti represents high Egyptian artistic refinement, whose name literally translates to "The Beautiful One Has Come."
+
+### Stop 8: Seated Pharaoh Statue (Colossus of Ramesses II)
+- **Overview**: A giant stone colossus of King Ramesses II seated on his royal throne.
+- **Historical Details**:
+  - The king is depicted with hands flat on his knees in a posture symbolizing stability, supreme authority, and physical strength.
+  - He wears the double crown (Pschent) representing his absolute sovereignty over Upper and Lower Egypt (North and South).

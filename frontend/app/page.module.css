@@ -1,0 +1,132 @@
+.container {
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Splash Screen */
+.splashScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: #000;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splashScreen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.splashVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.startOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10001;
+    backdrop-filter: blur(10px);
+}
+
+.startButton {
+    padding: 16px 40px;
+    background: rgba(255, 122, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 122, 0, 0.5);
+    color: #fff;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(255, 122, 0, 0.2);
+}
+
+.startButton:hover {
+    background: rgba(255, 122, 0, 0.3);
+    box-shadow: 0 0 50px rgba(255, 122, 0, 0.5);
+    transform: scale(1.05);
+    border-color: #ff7a00;
+}
+
+.skipButton {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    padding: 12px 24px;
+    background: rgba(20, 20, 20, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.skipButton:hover {
+    background: rgba(255, 122, 0, 0.2);
+    border-color: #ff7a00;
+    color: #ff7a00;
+}
+
+/* Main Content Wrapper */
+.mainContent {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.mainContent.visible {
+    opacity: 1;
+}
+
+/* Responsive Styles for Intro Video */
+@media (max-width: 768px) {
+    .splashVideo {
+        /* Prevents the video from being aggressively zoomed and cropped on vertical screens */
+        object-fit: contain;
+        background-color: #000;
+    }
+
+    .startButton {
+        padding: 14px 30px;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+
+    .skipButton {
+        bottom: 25px;
+        right: 20px;
+        padding: 10px 18px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .startButton {
+        padding: 12px 24px;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+}

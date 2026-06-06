@@ -1,0 +1,1 @@
+const CONFIG = { API_URL: "https://gcp-rag-dev-query-5bez32ydmq-uc.a.run.app" };

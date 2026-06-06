@@ -1,0 +1,16 @@
+.git
+.agents
+.gemini
+**/node_modules
+**/.next
+**/venv
+**/.venv
+**/__pycache__
+**/*.pyc
+backend/uploads
+backend/museum.db
+frontend/.env.local
+Dockerfile
+compose.yml
+README.md
+*.md
