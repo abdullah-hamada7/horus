@@ -3,7 +3,7 @@ import json
 
 project_id = "gcp-ai-494313"
 location = "global"
-datastore_id = "gcp-rag-dev-ds-unosbi63"
+datastore_id = "gcp-rag-dev-ds-tm21ktg9"
 
 client = discoveryengine.SearchServiceClient()
 serving_config = client.serving_config_path(

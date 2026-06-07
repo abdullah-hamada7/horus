@@ -156,42 +156,50 @@ export default function About() {
             {
               stop: "01",
               title: "Temple of Horus at Edfu",
-              desc: "Start at the entrance gates. Walk down the avenue of sphinxes where the Opet Festival was once celebrated."
+              desc: "Start at the entrance gates. Walk down the avenue of sphinxes where the Opet Festival was once celebrated.",
+              image: "/gallery/البوابة.png"
             },
             {
               stop: "02",
               title: "The Criosphinx",
-              desc: "Look at the ram-headed sphinx. It represents the god Amun-Ra, combining a ram's head (wisdom) with a lion's body (strength)."
+              desc: "Look at the ram-headed sphinx. It represents the god Amun-Ra, combining a ram's head (wisdom) with a lion's body (strength).",
+              image: "/gallery/Kabsh.png"
             },
             {
               stop: "03",
               title: "Obelisks at the Gate",
-              desc: "Two pink granite obelisks built by Ramesses II stand beside the massive entrance gate."
+              desc: "Two pink granite obelisks built by Ramesses II stand beside the massive entrance gate.",
+              image: "/gallery/مسلة.png"
             },
             {
               stop: "04",
               title: "Colonnade Hall Guardian",
-              desc: "Encounter the sphinx guarding the gate. The human head represents the king's wisdom and the lion body represents his power."
+              desc: "Encounter the sphinx guarding the gate. The human head represents the king's wisdom and the lion body represents his power.",
+              image: "/gallery/sphinx.png"
             },
             {
               stop: "05",
               title: "The Papyrus Forest",
-              desc: "Walk through the columns styled after papyrus plants, built to look like a forest rising from the Nile."
+              desc: "Walk through the columns styled after papyrus plants, built to look like a forest rising from the Nile.",
+              image: "/gallery/الاعمدة.png"
             },
             {
               stop: "06",
               title: "Tutankhamun's Treasures",
-              desc: "Go inside the sanctuary to see Tutankhamun's gold mask and his war chariot."
+              desc: "Go inside the sanctuary to see Tutankhamun's gold mask and his war chariot.",
+              image: "/gallery/توت.png"
             },
             {
               stop: "07",
               title: "Bastet & Nefertiti",
-              desc: "See the black cat statue representing the goddess Bastet and the famous bust of Queen Nefertiti."
+              desc: "See the black cat statue representing the goddess Bastet and the famous bust of Queen Nefertiti.",
+              image: "/gallery/نفرتيتي.png"
             },
             {
               stop: "08",
               title: "Colossus of Ramesses II",
-              desc: "End the tour in front of the seated statue of Ramesses II wearing the crown of Upper and Lower Egypt."
+              desc: "End the tour in front of the seated statue of Ramesses II wearing the crown of Upper and Lower Egypt.",
+              image: "/gallery/رمسيس.png"
             }
           ].map((item, idx) => (
             <motion.div
@@ -203,6 +211,15 @@ export default function About() {
               variants={fadeInUp}
             >
               <div className="space-y-4">
+                <div className="relative w-full h-40 rounded-xl overflow-hidden bg-white/5 mb-4">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 text-[10px] font-mono tracking-widest uppercase">STOP {item.stop}</span>
                   <span className="w-1.5 h-1.5 bg-[#ff7a00] rounded-full group-hover:shadow-[0_0_8px_#ff7a00] transition-shadow"></span>

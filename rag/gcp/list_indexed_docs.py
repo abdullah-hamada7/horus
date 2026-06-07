@@ -2,7 +2,7 @@ from google.cloud import discoveryengine_v1 as discoveryengine
 
 project_id = "gcp-ai-494313"
 location = "global"
-datastore_id = "gcp-rag-dev-ds-unosbi63"
+datastore_id = "gcp-rag-dev-ds-tm21ktg9"
 
 client = discoveryengine.DocumentServiceClient()
 parent = client.branch_path(
