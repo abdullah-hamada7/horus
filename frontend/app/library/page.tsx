@@ -25,9 +25,9 @@ interface King {
 }
 
 const DOCUMENTARIES = [
-  { title: "Secrets of the Pyramids", id: "l_O_X01U2tU", thumbnail: "https://img.youtube.com/vi/l_O_X01U2tU/0.jpg" },
-  { title: "Curse of the Pharaohs: The Truth", id: "v_zL2Fp1y1o", thumbnail: "https://img.youtube.com/vi/v_zL2Fp1y1o/0.jpg" },
-  { title: "A Day in the Life of an Ancient Egyptian", id: "Z3W_717kIAQ", thumbnail: "https://img.youtube.com/vi/Z3W_717kIAQ/0.jpg" }
+  { title: "Secrets of the Pyramids", id: "fJBlEPOj4Fk", thumbnail: "https://img.youtube.com/vi/fJBlEPOj4Fk/0.jpg" },
+  { title: "Curse of the Pharaohs: The Truth", id: "J_O9aJ9J14c", thumbnail: "https://img.youtube.com/vi/J_O9aJ9J14c/0.jpg" },
+  { title: "A Day in the Life of an Ancient Egyptian", id: "k1tUtaMSUK4", thumbnail: "https://img.youtube.com/vi/k1tUtaMSUK4/0.jpg" }
 ];
 
 const ERA_TRANSLATIONS: Record<string, string> = {
