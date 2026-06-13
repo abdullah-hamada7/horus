@@ -48,3 +48,7 @@ dev.pem
 *.tfvars
 *.tfvars.json
 .terraform.lock.hcl
+Horus J.md
+HORUS_ An Interactive Web and Mobile 3D Virtual Egyptian Museum with RAG AI Guide.pptx
+presentation_content.md
+thesis.pdf
